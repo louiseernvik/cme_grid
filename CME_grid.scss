@@ -32,3 +32,37 @@
     grid-row: 3/4
     // förkortning - enklare
 }
+
+.container-2{
+    border: 1px solid black;
+    height: 300px;
+    width: 600px;
+
+    display: grid;
+    // grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    
+    // positionerar horisontellt
+    justify-items: stretch;
+    // positionerar vertikalt
+    align-items: stretch;
+    // align-items och justify-items tsm.
+    place-items: stretch stretch;
+
+
+}
+
+
+// gäller för alla klasser som börjar med order box
+[class*="box"]{
+    border: 1px solid grey;
+
+}
+
+.box8{
+    justify-self: center;
+    align-self: center;
+    // align och justify-self tsm.
+    place-self: center center;
+}

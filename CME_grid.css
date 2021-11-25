@@ -41,4 +41,34 @@
   -ms-grid-row-span: 1;
   grid-row: 3/4;
 }
+
+.container-2 {
+  border: 1px solid black;
+  height: 300px;
+  width: 600px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  justify-items: stretch;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  place-items: stretch stretch;
+}
+
+[class*="box"] {
+  border: 1px solid grey;
+}
+
+.box8 {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  place-self: center center;
+}
 /*# sourceMappingURL=CME_grid.css.map */
