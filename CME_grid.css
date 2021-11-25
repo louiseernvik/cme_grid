@@ -71,4 +71,54 @@
       align-self: center;
   place-self: center center;
 }
+
+.container-3 {
+  border: 1px solid black;
+  height: 300px;
+  width: 600px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "header header header sidebar" "content content content sidebar" "footer footer footer .";
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  row-gap: 20px;
+  gap: 10px 20px;
+  padding: 10px;
+}
+
+header {
+  background-color: salmon;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: header;
+}
+
+main {
+  background-color: #ececec;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: content;
+}
+
+aside {
+  background-color: #8ac6ff;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  grid-area: sidebar;
+}
+
+footer {
+  background-color: #587fb9;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: footer;
+}
 /*# sourceMappingURL=CME_grid.css.map */

@@ -33,6 +33,9 @@
     // förkortning - enklare
 }
 
+
+
+
 .container-2{
     border: 1px solid black;
     height: 300px;
@@ -65,4 +68,44 @@
     align-self: center;
     // align och justify-self tsm.
     place-self: center center;
+}
+
+
+
+.container-3{
+    border: 1px solid black;
+    height: 300px;
+    width: 600px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto; //default
+    grid-template-areas: 
+        "header header header sidebar"
+        "content content content sidebar"
+        "footer footer footer ." //punkt = tomt, måste vara lika många värden för alla rader annars kolapps
+    ;
+
+    column-gap: 10px; //istället för margin
+    row-gap: 20px; //iställer för margin
+    gap: 10px 20px; //sammanställer column-gap och row-gap
+    padding: 10px;
+
+}
+
+header{
+    background-color: salmon;
+    grid-area: header; //nyckel för att grid-template-area ovan ska funka
+}
+main{
+    background-color: rgb(236, 236, 236);
+    grid-area: content;
+}
+aside{
+    background-color: rgb(138, 198, 255);
+    grid-area: sidebar;
+}
+footer{
+    background-color: rgb(88, 127, 185);
+    grid-area: footer;
 }
