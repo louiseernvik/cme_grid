@@ -85,6 +85,12 @@
         "content content content sidebar"
         "footer footer footer ." //punkt = tomt, måste vara lika många värden för alla rader annars kolapps
     ;
+
+    column-gap: 10px; //istället för margin
+    row-gap: 20px; //iställer för margin
+    gap: 10px 20px; //sammanställer column-gap och row-gap
+    padding: 10px;
+
 }
 
 header{
